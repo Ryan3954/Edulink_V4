@@ -1,0 +1,5 @@
+FROM mysql:latest
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=1
+COPY ./notes.sql /docker-entrypoint-initdb.d/
+COPY ./forum.sql /docker-entrypoint-initdb.d/
+COPY ./course_db.sql /docker-entrypoint-initdb.d/
